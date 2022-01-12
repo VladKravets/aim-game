@@ -4,7 +4,7 @@ const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const colors = ['#854442 ', '#0057e7', '#fed766', '#ffa700', '#f4f4f8', '#011f4b', '#651e3e', '#f6cd61', '#7bc043', '#e0a899']
-
+const firstScreen=document.querySelector('#first-screen')
 
 let time = 0
 let score = 0
@@ -57,6 +57,7 @@ function setTime(value) {
 function finishGame(params) {
 	timeEl.parentNode.classList.add('hide')
 	board.innerHTML = `<h2>Ваш результат: <span class='primary'>${score}</span></h2>`
+	return firstScreen
 }
 
 function createRandomCircle(params) {
